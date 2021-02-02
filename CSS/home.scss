@@ -25,16 +25,20 @@ body{
 .nav{
   height: 15vh;
 }
+
 .nav-links{
   display: flex;
   float: right;
   list-style: none;
   height: 100%;
-  width: 30%;
-  justify-content: space-around;
   align-items: center;
+ // transition: 0.5s;
+  background-color: transparent;
+  background-position: 100% right;
+  
 }
 .nav-links li a{
+  padding: 10px;
   color: white;
   text-decoration: none;
   font-size: 28px;
@@ -44,6 +48,8 @@ body{
   margin-left: 10px;
   width: 134px;
   height: 125px;
+  position: fixed;
+   z-index: 2;
 }
 
 .line{
@@ -52,34 +58,113 @@ body{
   background-color: white;
   margin: 10px;
 }
-
 .hamburger{
+  position: relative;
   cursor: pointer;
   float: right;
   z-index: 3;
+  margin-top: 10px;
+  margin-right: 5px;
 }
 
+.hamburger .line{
+  transition: all .5s ease-in-out;
+}
 
 @media screen and (max-width: 768px){
   .nav-links{
     margin-block-start: 0em;
     position: fixed;
+    background: transparent;
     background-color: #121212;
     height: 100vh;
     width: 100%;
     flex-direction: column;
     z-index: 1;
-    flex-direction: column;
-    clip-path: circle(100px at 90% -10%);
-    -webkit-clip-path: circle(100px at 90% -10%);
+    clip-path: circle(10px at 94% -10%);
+    -webkit-clip-path: circle(10px at 94% -10%);
     transition: all 1s ease-out;
    }
    .nav-links.open{
-    clip-path: circle(2000px at 90% -10%);
-    -webkit-clip-path: circle(2000px at 90% -10%);
+    clip-path: circle(2000px at 94% -10%);
+    -webkit-clip-path: circle(2000px at 94% -10%);
    }
-  .logo{
-   position: fixed;
-   z-index: 2;
+}
+
+.hamburger.open .line:nth-child(1){
+  transform: rotate(45deg) translate(15px,6px);
+  box-shadow: none;
+}
+
+.hamburger.open .line:nth-child(3){
+  transform: rotate(-45deg) translate(15px,-5px);
+  box-shadow: none;
+}
+
+.hamburger.open .line:nth-child(2){
+  transform: translate(-50px);
+  background: transparent;
+  box-shadow: none;
+  transition: all .5s ease-in-out;
+}
+
+.triangle{
+  position: absolute;
+  width: 100%;
+  margin-top: 94vh;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.triangleAnim{
+  transition: 1s;
+  margin-left: 50%;
+}
+
+@keyframes pulse{
+  0% {margin-top: 94vh;}
+  10% {margin-top: 94.2vh;}
+  20% {margin-top: 94.4vh;}
+  30% {margin-top: 94.6vh;}
+  40% {margin-top: 94.8vh;}
+  50% {margin-top: 95vh;}
+  60% {margin-top: 94.8vh;}
+  70% {margin-top: 94.6vh;}
+  80% {margin-top: 94.4vh;}
+  90% {margin-top: 94.2vh;}
+  100% {margin-top: 94vh;}
+}
+
+@media screen and (max-width: 768px){
+   .triangle{
+    margin-left: 50%;
+    animation-name: pulseMobile;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
   }
+   .triangleAnim{
+    transition: 1s;
+    transform: rotate(-90deg);
+  }
+  @keyframes pulseMobile{
+    0% {margin-left: -2%;}
+    10% {margin-left: -1.8%;}
+    20% {margin-left: -1.6%;}
+    30% {margin-left: -1.4%;}
+    40% {margin-left: -1.2%;}
+    50% {margin-left: -1%;}
+    60% {margin-left: -1.2%;}
+    70% {margin-left: -1.4%;}
+    80% {margin-left: -1.6%;}
+    90% {margin-left: -1.8%;}
+    100% {margin-left: -2%;}
+  }
+}
+.copyright{
+  position: fixed;
+  font-size: 20px;
+  margin-top: 94vh;
+  font-weight: bold;
+  margin-left: 3%;
+  color: #ACACB6;
 }
