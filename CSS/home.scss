@@ -168,3 +168,84 @@ body{
   margin-left: 3%;
   color: #ACACB6;
 }
+.test{
+  margin-block-start: 0em;
+    position: fixed;
+    background: transparent;
+    background-color: #121212;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    z-index: 1;
+    clip-path: circle(100px at 99% -10%);
+    -webkit-clip-path: circle(100px at 99% -10%);
+    transition: all 1s ease-out;
+}
+.test.open{
+  clip-path: circle(3000px at 99% -10%);
+  -webkit-clip-path: circle(3000px at 99% -10%);
+}
+
+.threeProjects{
+  position: absolute;
+  width: 28%;
+  height: 100%;
+}
+
+.menuProject{
+  height: calc(100%/3);
+}
+
+.firstImage{
+  background-image: url("../Images/universe.jpg");
+}
+.secondImage{
+  background-image: url("../Images/ac.jpg");
+}
+.thirdImage{
+  background-image: url("../Images/shop.png");
+}
+
+.span{
+  opacity: 0;
+  font-size: 25px;
+  letter-spacing: 20px;
+  font-weight: 600;
+}
+
+.firstImage, .secondImage, .thirdImage {
+  transition: .8s;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstImage:hover,.secondImage:hover, .thirdImage:hover{
+  filter: none;
+  -webkit-filter: grayscale(100%);
+  transition: .8s;
+}
+
+a{
+  text-decoration: none;
+}
+
+.firstImage:hover .span{
+  color: white;
+  opacity: 1;
+  transform: translateY(10px);
+  transition: all 0.35s ease-in-out;
+}
+
+.hamburger-links{
+  position: absolute;
+  margin-top: -100%;
+  float: right;
+  font-size: 90px;
+}

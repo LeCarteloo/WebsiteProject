@@ -317,4 +317,103 @@ body {
   margin-left: 3%;
   color: #ACACB6;
 }
+
+.test {
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  position: fixed;
+  background: transparent;
+  background-color: #121212;
+  height: 100vh;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+  clip-path: circle(100px at 99% -10%);
+  -webkit-clip-path: circle(100px at 99% -10%);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.test.open {
+  clip-path: circle(3000px at 99% -10%);
+  -webkit-clip-path: circle(3000px at 99% -10%);
+}
+
+.threeProjects {
+  position: absolute;
+  width: 28%;
+  height: 100%;
+}
+
+.menuProject {
+  height: calc(100%/3);
+}
+
+.firstImage {
+  background-image: url("../Images/universe.jpg");
+}
+
+.secondImage {
+  background-image: url("../Images/ac.jpg");
+}
+
+.thirdImage {
+  background-image: url("../Images/shop.png");
+}
+
+.span {
+  opacity: 0;
+  font-size: 25px;
+  letter-spacing: 20px;
+  font-weight: 600;
+}
+
+.firstImage, .secondImage, .thirdImage {
+  -webkit-transition: .8s;
+  transition: .8s;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.firstImage:hover, .secondImage:hover, .thirdImage:hover {
+  filter: none;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.firstImage:hover .span {
+  color: white;
+  opacity: 1;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.hamburger-links {
+  position: absolute;
+  margin-top: -100%;
+  float: right;
+  font-size: 90px;
+}
 /*# sourceMappingURL=home.css.map */
