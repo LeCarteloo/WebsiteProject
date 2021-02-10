@@ -82,31 +82,6 @@ body {
   transition: all .5s ease-in-out;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-links {
-    -webkit-margin-before: 0em;
-            margin-block-start: 0em;
-    position: fixed;
-    background: transparent;
-    background-color: #121212;
-    height: 100vh;
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    z-index: 1;
-    clip-path: circle(10px at 94% -10%);
-    -webkit-clip-path: circle(10px at 94% -10%);
-    -webkit-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-  }
-  .nav-links.open {
-    clip-path: circle(2000px at 94% -10%);
-    -webkit-clip-path: circle(2000px at 94% -10%);
-  }
-}
-
 .hamburger.open .line:nth-child(1) {
   -webkit-transform: rotate(45deg) translate(15px, 6px);
           transform: rotate(45deg) translate(15px, 6px);
@@ -318,7 +293,7 @@ body {
   color: #ACACB6;
 }
 
-.test {
+.menu {
   -webkit-margin-before: 0em;
           margin-block-start: 0em;
   position: fixed;
@@ -331,19 +306,19 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 1;
-  clip-path: circle(100px at 99% -10%);
-  -webkit-clip-path: circle(100px at 99% -10%);
+  clip-path: circle(100px at 99% -20%);
+  -webkit-clip-path: circle(100px at 99% -20%);
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
 
-.test.open {
-  clip-path: circle(3000px at 99% -10%);
-  -webkit-clip-path: circle(3000px at 99% -10%);
+.menu.open {
+  clip-path: circle(3000px at 99% -20%);
+  -webkit-clip-path: circle(3000px at 99% -20%);
 }
 
 .threeProjects {
-  position: absolute;
+  float: left;
   width: 28%;
   height: 100%;
 }
@@ -364,11 +339,21 @@ body {
   background-image: url("../Images/shop.png");
 }
 
-.span {
+.title {
+  -webkit-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out;
+  position: relative;
   opacity: 0;
-  font-size: 25px;
+  font-size: 1.4vw;
   letter-spacing: 20px;
+  /*font-size: 25px;
+  letter-spacing: toEm(220);*/
   font-weight: 600;
+  text-shadow: 2px 2px black;
+}
+
+a {
+  text-decoration: none;
 }
 
 .firstImage, .secondImage, .thirdImage {
@@ -397,11 +382,7 @@ body {
   transition: .8s;
 }
 
-a {
-  text-decoration: none;
-}
-
-.firstImage:hover .span {
+.firstImage:hover .title, .secondImage:hover .title, .thirdImage:hover .title {
   color: white;
   opacity: 1;
   -webkit-transform: translateY(10px);
@@ -411,9 +392,129 @@ a {
 }
 
 .hamburger-links {
+  margin: 0;
   position: absolute;
-  margin-top: -100%;
-  float: right;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: 5vw;
   font-size: 90px;
+  letter-spacing: 0.1em;
+  color: white;
+  font-weight: bold;
+  list-style: none;
+}
+
+.hamburger-main {
+  display: inline-block;
+  width: calc(100% - 28%);
+  height: 92%;
+}
+
+.featured {
+  position: relative;
+  color: #919191;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  margin-left: 1.5vw;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.menu-footer {
+  width: calc(100% - 28%);
+  float: right;
+}
+
+/* ------------------- ICONS ------------------- */
+.fab {
+  float: right;
+  margin: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #919191;
+  font-size: 5em;
+}
+
+.fa-github:hover {
+  color: #852792;
+}
+
+.fa-youtube:hover {
+  color: #C4302B;
+}
+
+.fa-discord:hover {
+  color: #7289DA;
+}
+
+.menu-copyright {
+  position: absolute;
+  margin-left: 27px;
+  margin-top: 50px;
+  color: #919191;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.creators a {
+  color: white;
+  display: none;
+}
+
+.test:hover ~ .creators a {
+  display: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .hamburger-main {
+    height: 70%;
+  }
+  .menu-copyright {
+    display: none;
+  }
+  .logo {
+    width: 20%;
+    height: auto;
+  }
+  .nav-links {
+    opacity: 0;
+  }
+  .threeProjects {
+    display: none;
+  }
+  .fab {
+    font-size: 3em;
+  }
+  .hamburger-links {
+    -webkit-transition: .2s;
+    transition: .2s;
+    font-size: 2.2rem;
+    margin-left: 2vw;
+    top: 35%;
+  }
+  .hamburger-links li {
+    padding-top: 15px;
+  }
+  .featured {
+    display: none;
+  }
 }
 /*# sourceMappingURL=home.css.map */
