@@ -6,15 +6,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/9b555d61ad.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>Strona Główna</title>
 </head>
 
 <body>
-  <!-- background video -->
-  <video class="homeVideo" poster="../Images/background.png" autoplay muted loop>
-    <source src="../Videos/video.mp4" type="video/mp4">
-  </video>
-
   <nav>
     <a href="#">
       <image class="logo" src="../Images/logo.png" />
@@ -33,7 +29,7 @@
       <li><a href="#">APLIKACJE</a></li>
     </ul>
 
-    <div class="menu open">
+    <div class="menu">
       <div class="threeProjects">
         <a href="#">
           <div class="menuProject">
@@ -64,8 +60,8 @@
           <li>STRONY</li>
           <li>MODELE</li>
           <li>APLIKACJE</li>
-          <li class="test">O TWÓRCACH</li>
-          <li class="creators"><a href="#">Nexus</a> <a href="#">Carteloo</a> </li>
+          <li id="creators" onclick="showCreators()">O TWÓRCACH</li>
+          <li id="creatorsExpand"><a href="#">Nexus</a> <a href="#">Carteloo</a> </li>
         </ul>
       </div>
       <div class="menu-footer">
@@ -78,7 +74,20 @@
     </div>
   </nav>
 
-  <section>
+  <div class="slider">
+    <section id="section1">
+      <!-- background video -->
+      <video class="homeVideo" poster="../Images/background.png" autoplay muted loop>
+        <source src="../Videos/video.mp4" type="video/mp4">
+      </video> 
+    </section>
+    <section id="section2">
+    </section> 
+    <section id="section3">
+    </section> 
+  </div>
+
+  <div>
     <p class="copyright">© 2021 NC STUDIO</p>
     <div class="triangle">
       <svg class="triangleAnim" xmlns="http://www.w3.org/2000/svg" width="28.861" height="17.822"
@@ -88,7 +97,7 @@
           transform="translate(-9 -11.76)" fill="#fff" />
       </svg>
     </div>
-  </section>
+  </div>
 
   <script src="../JS/home.js"></script>
 

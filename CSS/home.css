@@ -1,7 +1,36 @@
 body {
+  overflow-y: hidden;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider {
+  font-family: sans-serif;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+
+section {
+  padding: 1rem;
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+#section2 {
+  background-image: url("../Images/ac_background.jpg");
+  background-size: cover;
+}
+
+#section3 {
+  background-color: magenta;
 }
 
 .homeVideo {
@@ -27,8 +56,9 @@ body {
   }
 }
 
-.nav {
-  height: 15vh;
+nav {
+  width: 100%;
+  position: fixed;
 }
 
 .nav-links {
@@ -43,6 +73,7 @@ body {
           align-items: center;
   background-color: transparent;
   background-position: 100% right;
+  float: right;
 }
 
 .nav-links li a {
@@ -313,8 +344,8 @@ body {
 }
 
 .menu.open {
-  clip-path: circle(3000px at 99% -20%);
-  -webkit-clip-path: circle(3000px at 99% -20%);
+  clip-path: circle(3500px at 99% -20%);
+  -webkit-clip-path: circle(3500px at 99% -20%);
 }
 
 .threeProjects {
@@ -403,6 +434,15 @@ a {
   color: white;
   font-weight: bold;
   list-style: none;
+  cursor: pointer;
+}
+
+.hamburger-links:hover {
+  color: #919191;
+}
+
+.hamburger-links > *:hover {
+  color: white;
 }
 
 .hamburger-main {
@@ -422,8 +462,8 @@ a {
           writing-mode: vertical-lr;
   margin-left: 1.5vw;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-35%);
+          transform: translateY(-35%);
 }
 
 .menu-footer {
@@ -462,13 +502,15 @@ a {
   font-weight: 600;
 }
 
-.creators a {
-  color: white;
+#creatorsExpand {
+  position: absolute;
   display: none;
+  bottom: -15%;
 }
 
-.test:hover ~ .creators a {
-  display: inherit;
+#creatorsExpand a {
+  color: white;
+  font-size: 70px;
 }
 
 @media screen and (max-width: 768px) {
