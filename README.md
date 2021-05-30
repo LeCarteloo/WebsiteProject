@@ -1,4 +1,4 @@
-# Porfolio Website - ReadMe
+# Porfolio Website
 
 <div style="text-align:center; height: 150px;" alt="Logo of website"><img src="https://i.imgur.com/9NKRBUZ.png" /></div>
 
@@ -23,11 +23,13 @@ It is not yet finished.
 - SCSS
 - JavaScript
 
-[Back To The Top](#read-me)
+[Back To The Top](#Porfolio-Website)
 
 ---
 
 ## Screenshots
+
+<p align="center">
 
 <div style="text-align:center; margin-bottom: 20px;" alt="Video"><img src="https://i.imgur.com/VgZgibo.gifv"/></div>
 
@@ -37,7 +39,9 @@ It is not yet finished.
 
 <div style="text-align:center; height: 250px; margin-bottom: 20px;" alt="Home"><img src="https://i.imgur.com/RDtGEuH.png"/></div>
 
-[Back To The Top](#read-me)
+<p>
+
+[Back To The Top](#Porfolio-Website)
 
 ---
 
@@ -46,6 +50,6 @@ It is not yet finished.
 - E-mail - filippapiernik1999@gmail.com
 - Discord - #0476
 
-[Back To The Top](#read-me)
+[Back To The Top](#Porfolio-Website)
 
 ---
