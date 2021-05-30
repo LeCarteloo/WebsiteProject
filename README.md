@@ -1,6 +1,8 @@
 # Porfolio Website
 
-<div style="text-align:center; height: 150px;" alt="Logo of website"><img src="https://i.imgur.com/9NKRBUZ.png" /></div>
+<p align="center" style="margin-bottom: 20px;">
+<img src="https://i.imgur.com/9NKRBUZ.png" />
+</p>
 
 ---
 
@@ -29,17 +31,23 @@ It is not yet finished.
 
 ## Screenshots
 
-<p align="center">
 
-<div style="text-align:center; margin-bottom: 20px;" alt="Video"><img src="https://i.imgur.com/VgZgibo.gifv"/></div>
+<p align="center" style="margin-bottom: 20px;">
+<img src="https://i.imgur.com/XDjTteN.pngg"/>
+</p>
 
-<div style="text-align:center; margin-bottom: 20px;" alt="Home"><img src="https://i.imgur.com/tMaFtUU.png"/></div>
+<p align="center" style="margin-bottom: 20px;">
+<img src="https://i.imgur.com/tMaFtUU.png"/>
+</p>
 
-<div style="text-align:center; height: 250px; margin-bottom: 20px;" alt="Home"><img src="https://i.imgur.com/uUdIR63.png"/></div>
+<p align="center" style="margin-bottom: 20px;">
+<img src="https://i.imgur.com/uUdIR63.png"/>
+</p>
 
-<div style="text-align:center; height: 250px; margin-bottom: 20px;" alt="Home"><img src="https://i.imgur.com/RDtGEuH.png"/></div>
+<p align="center" style="margin-bottom: 20px;">
+<img src="https://i.imgur.com/RDtGEuH.png"/>
+</p>
 
-<p>
 
 [Back To The Top](#Porfolio-Website)
 
