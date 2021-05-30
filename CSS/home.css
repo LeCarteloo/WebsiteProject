@@ -17,7 +17,7 @@ body {
 }
 
 section {
-  padding: 1rem;
+  padding-left: 0.5px;
   min-width: 100vw;
   height: 100vh;
   scroll-snap-align: start;
@@ -27,6 +27,8 @@ section {
 #section2 {
   background-image: url("../Images/ac_background.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 #section3 {
@@ -39,6 +41,16 @@ section {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   position: fixed;
+  z-index: -2;
+  min-width: 100%;
+}
+
+.videoTest {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -1;
 }
 
@@ -502,15 +514,29 @@ a {
   font-weight: 600;
 }
 
-#creatorsExpand {
-  position: absolute;
+#creatorsExpand, #appsExpand {
   display: none;
+  min-width: 100%;
+  -webkit-transition: 2s;
+  transition: 2s;
   bottom: -15%;
 }
 
-#creatorsExpand a {
-  color: white;
+#creatorsExpand a, #appsExpand a {
+  color: #919191;
   font-size: 70px;
+}
+
+#creators:hover + #creatorsExpand, #creatorsExpand:hover {
+  display: inline;
+}
+
+#apps:hover + #appsExpand, #appsExpand:hover {
+  display: inline;
+}
+
+#creatorsExpand > *:hover {
+  color: white;
 }
 
 @media screen and (max-width: 768px) {

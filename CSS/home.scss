@@ -15,7 +15,6 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-//// TESTING
 .slider{
   font-family: sans-serif;
   -ms-scroll-snap-type: x mandatory;
@@ -25,7 +24,7 @@ body{
   overflow-x: scroll;
 }
 section{
-  padding: 1rem;
+  padding-left: 0.5px; // check this later
   min-width: 100vw;
   height: 100vh;
   scroll-snap-align: start;
@@ -34,19 +33,29 @@ section{
 #section2{
   background-image: url("../Images/ac_background.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 #section3{
   background-color: magenta;
 }
-//// TESTING
-
 .homeVideo{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
+  z-index: -2;
+  min-width: 100%;
+}
+
+.videoTest{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover; // use "cover" to avoid distortion
   z-index: -1;
 }
+
 @media (min-aspect-ratio: 16/9){
   .homeVideo{
     width: 100%;
@@ -189,16 +198,16 @@ nav{
 }
 .menu{
   margin-block-start: 0em;
-    position: fixed;
-    background: transparent;
-    background-color: $dark;
-    height: 100vh;
-    width: 100%;
-    flex-direction: column;
-    z-index: 1;
-    clip-path: circle(100px at 99% -20%);
-    -webkit-clip-path: circle(100px at 99% -20%);
-    transition: all 1s ease-out;
+  position: fixed;
+  background: transparent;
+  background-color: $dark;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  z-index: 1;
+  clip-path: circle(100px at 99% -20%);
+  -webkit-clip-path: circle(100px at 99% -20%);
+  transition: all 1s ease-out;
 }
 .menu.open{
   clip-path: circle(3500px at 99% -20%);
@@ -345,15 +354,31 @@ a{
   font-size: 20px;
   font-weight: $semibold;
 }
-#creatorsExpand{
-  position: absolute;
+
+// TESTS
+#creatorsExpand, #appsExpand{
+  //position: relative;
   display: none;
+  min-width: 100%;
+  transition: 2s;
   bottom: -15%;
 }
-#creatorsExpand a{
-  color: white;
+#creatorsExpand a, #appsExpand a{
+  color: $gray;
   font-size: 70px;
 }
+
+#creators:hover + #creatorsExpand, #creatorsExpand:hover{
+  display: inline;
+}
+#apps:hover + #appsExpand, #appsExpand:hover{
+  display: inline;
+}
+
+#creatorsExpand > *:hover{
+  color:white;
+}
+// TESTS
 
 @media screen and (max-width: 768px){
   .menu-footer{

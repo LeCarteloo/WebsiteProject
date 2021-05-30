@@ -23,11 +23,23 @@
     </div>
 
     <ul class="nav-links">
-      <li><a href="#">GRY</a></li>
+      <li><a href="#section2">GRY</a></li>
       <li><a href="#">STRONY</a></li>
       <li><a href="#">MODELE</a></li>
       <li><a href="#">APLIKACJE</a></li>
     </ul>
+
+    <div class="footer">
+      <p class="copyright">© 2021 NC STUDIO</p>
+      <div class="triangle">
+        <svg class="triangleAnim" xmlns="http://www.w3.org/2000/svg" width="28.861" height="17.822"
+          viewBox="0 0 28.861 17.822">
+          <path id="Icon_material-keyboard-arrow-down" data-name="Icon material-keyboard-arrow-down"
+            d="M12.391,11.76,23.431,22.775,34.47,11.76l3.391,3.391L23.431,29.582,9,15.151Z"
+            transform="translate(-9 -11.76)" fill="#fff" />
+        </svg>
+      </div>
+    </div>
 
     <div class="menu">
       <div class="threeProjects">
@@ -57,10 +69,14 @@
         <span class="featured">WYRÓŻNIONE PRACE</span>
         <ul class="hamburger-links">
           <li>GRY</li>
+          <li id="appsExpand"><a href="#">Bank</a> <a href="#">Sklep</a></li>
           <li>STRONY</li>
+          <li id="appsExpand"><a href="#">Bank</a> <a href="#">Sklep</a></li>
           <li>MODELE</li>
-          <li>APLIKACJE</li>
-          <li id="creators" onclick="showCreators()">O TWÓRCACH</li>
+          <li id="appsExpand"><a href="#">Bank</a> <a href="#">Sklep</a></li>
+          <li id="apps">APLIKACJE</li>
+          <li id="appsExpand"><a href="#">Bank</a> <a href="#">Sklep</a></li>
+          <li id="creators">O TWÓRCACH</li>
           <li id="creatorsExpand"><a href="#">Nexus</a> <a href="#">Carteloo</a> </li>
         </ul>
       </div>
@@ -74,29 +90,20 @@
     </div>
   </nav>
 
+  
+
+
   <div class="slider">
     <section id="section1">
-      <!-- background video -->
-      <video class="homeVideo" poster="../Images/background.png" autoplay muted loop>
+      <video class="videoTest" poster="../Images/background.png" autoplay muted loop>
         <source src="../Videos/video.mp4" type="video/mp4">
-      </video> 
+      </video>  
     </section>
     <section id="section2">
     </section> 
     <section id="section3">
+      
     </section> 
-  </div>
-
-  <div>
-    <p class="copyright">© 2021 NC STUDIO</p>
-    <div class="triangle">
-      <svg class="triangleAnim" xmlns="http://www.w3.org/2000/svg" width="28.861" height="17.822"
-        viewBox="0 0 28.861 17.822">
-        <path id="Icon_material-keyboard-arrow-down" data-name="Icon material-keyboard-arrow-down"
-          d="M12.391,11.76,23.431,22.775,34.47,11.76l3.391,3.391L23.431,29.582,9,15.151Z"
-          transform="translate(-9 -11.76)" fill="#fff" />
-      </svg>
-    </div>
   </div>
 
   <script src="../JS/home.js"></script>

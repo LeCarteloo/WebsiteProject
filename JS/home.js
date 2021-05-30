@@ -7,24 +7,13 @@ hamburger.addEventListener('click', () => {
         navLinks.classList.toggle("open");
         hamburger.classList.toggle("open");
         menu.classList.toggle("open");
+
 });
 
 function turnOffHamburger(){
     hamburger.classList.remove("open");
     navLinks.classList.remove("open");
     menu.classList.remove("open");
-}
-var a=1;
-function showCreators(){
-    if(a==1){
-        document.getElementById('creatorsExpand').style.display="inline";
-        return a=0;
-    }
-    else{
-        document.getElementById('creatorsExpand').style.display="none";
-        return a=1;
-    }
-    
 }
 
 // If window is resized then class open is being removed
